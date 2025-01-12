@@ -1,4 +1,4 @@
-Claras' Kitchen & C0.
+## Claras' Kitchen & C0.
 
 ## Table of Contents
 
