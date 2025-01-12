@@ -1,14 +1,13 @@
 # Claras' Kitchen & Co.
 
-## Table of Contents
-
-- [Description](#description)
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
-
 ## Description
 
 This is a Landing Page To get Leads, turning them to potential customers. Contacting the business owner to place orders.
+
+## Table of Contents
+
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
 
 ## Technologies Used
 
