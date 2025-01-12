@@ -1,7 +1,5 @@
 # Claras' Kitchen & Co.
 
-## Description
-
 This is a Landing Page To get Leads, turning them to potential customers. Contacting the business owner to place orders.
 
 ## Table of Contents
