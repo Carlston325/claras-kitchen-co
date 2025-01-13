@@ -82,7 +82,7 @@ export default function Home(props) {
       });
     }, 8000);
     return () => clearInterval(intervalId);
-  }, [menu]);
+  }, [menu, currentIndex]);
 
   return (
     <main className="main-body">
@@ -102,7 +102,7 @@ export default function Home(props) {
               setToggle(!toggle);
             }}
           >
-            Check Ingrediants
+            {toggle ? "Collapse Ingrediants" : "Check Ingrediants"}
           </button>
           {toggle && <p className="ingrediants">{firstImage.ingrediants}</p>}
         </div>
