@@ -24,14 +24,6 @@ h1 {
 .main-body {
   width: 78%;
 }
-.page-title {
-  padding: 4% 6%;
-  font-size: clamp(2rem, 5vw, 7rem);
-  font-family: var(--friendly-font);
-  position: relative;
-  z-index: 1;
-  text-shadow: 1px 0px 2px rgba(0, 0, 0, 0.5);
-}
 .page-hero {
   width: 100%;
   height: 60vh;
@@ -46,4 +38,16 @@ h1 {
   top: 0;
   left: 0;
   z-index: 0;
+}
+.page-title {
+  padding: 4% 6%;
+  font-size: clamp(2rem, 5vw, 7rem);
+  font-family: var(--friendly-font);
+  position: relative;
+  z-index: 1;
+  text-shadow: 1px 0px 2px rgba(0, 0, 0, 0.5);
+}
+.hero-item-info {
+  position: relative;
+  z-index: 2;
 }
