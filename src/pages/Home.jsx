@@ -1,9 +1,12 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
+// import SmallCarouselItem from "../components/SmallCarouselItem";
+import LargeCarouselItem from "../components/LargeCarouselItem";
 
 export default function Home(props) {
-  let [toggle, setToggle] = useState(false);
-  let [currentIndex, setCurrentIndex] = useState(0);
+  console.log(`Viewport Width: ${window.innerWidth}`);
+  console.log(`Viewport Height: ${window.innerHeight}`);
 
+  let [currentIndex, setCurrentIndex] = useState(0);
   const menuData = props.menu;
   const menu = menuData.map((item) => {
     return {
@@ -16,31 +19,38 @@ export default function Home(props) {
 
   let [firstImage, setFirstImage] = useState({
     name: menu[0].name,
-    descrip: menu[0].descrip,
     src: menu[0].image,
-    alt: `The dish is called ${menu[0].name}`,
+    descrip: menu[0].descrip,
     variations: menu[0].variations,
     ingrediants: menu[0].contains(),
   });
   let [secondImage, setSecondImage] = useState({
     name: menu[1].name,
     src: menu[1].image,
-    alt: `The dish is called ${menu[1].name}`,
+    descrip: menu[1].descrip,
+    variations: menu[1].variations,
+    ingrediants: menu[1].contains(),
   });
   let [thirdImage, setThirdImage] = useState({
     name: menu[2].name,
     src: menu[2].image,
-    alt: `The dish is called ${menu[2].name}`,
+    descrip: menu[2].descrip,
+    variations: menu[2].variations,
+    ingrediants: menu[2].contains(),
   });
   let [fourthImage, setFourthImage] = useState({
     name: menu[3].name,
     src: menu[3].image,
-    alt: `The dish is called ${menu[3].name}`,
+    descrip: menu[3].descrip,
+    variations: menu[3].variations,
+    ingrediants: menu[3].contains(),
   });
   let [fifthImage, setFifthImage] = useState({
     name: menu[4].name,
     src: menu[4].image,
-    alt: `The dish is called ${menu[4].name}`,
+    descrip: menu[4].descrip,
+    variations: menu[4].variations,
+    ingrediants: menu[4].contains(),
   });
 
   //Rotate Carousel Images
@@ -51,31 +61,38 @@ export default function Home(props) {
 
         setFirstImage({
           name: menu[newIndex].name,
-          descrip: menu[newIndex].descrip,
           src: menu[newIndex].image,
-          alt: `The dish is called ${menu[newIndex].name}`,
+          descrip: menu[newIndex].descrip,
           variations: menu[newIndex].variations,
           ingrediants: menu[newIndex].contains(),
         });
         setSecondImage({
           name: menu[(newIndex + 1) % menu.length].name,
           src: menu[(newIndex + 1) % menu.length].image,
-          alt: `The dish is called ${menu[(newIndex + 1) % menu.length].name}`,
+          descrip: menu[(newIndex + 1) % menu.length].descrip,
+          variations: menu[(newIndex + 1) % menu.length].variations,
+          ingrediants: menu[(newIndex + 1) % menu.length].contains(),
         });
         setThirdImage({
           name: menu[(newIndex + 2) % menu.length].name,
           src: menu[(newIndex + 2) % menu.length].image,
-          alt: `The dish is called ${menu[(newIndex + 2) % menu.length].name}`,
+          descrip: menu[(newIndex + 2) % menu.length].descrip,
+          variations: menu[(newIndex + 2) % menu.length].variations,
+          ingrediants: menu[(newIndex + 2) % menu.length].contains(),
         });
         setFourthImage({
           name: menu[(newIndex + 3) % menu.length].name,
           src: menu[(newIndex + 3) % menu.length].image,
-          alt: `The dish is called ${menu[(newIndex + 3) % menu.length].name}`,
+          descrip: menu[(newIndex + 3) % menu.length].descrip,
+          variations: menu[(newIndex + 3) % menu.length].variations,
+          ingrediants: menu[(newIndex + 3) % menu.length].contains(),
         });
         setFifthImage({
           name: menu[(newIndex + 4) % menu.length].name,
           src: menu[(newIndex + 4) % menu.length].image,
-          alt: `The dish is called ${menu[(newIndex + 4) % menu.length].name}`,
+          descrip: menu[(newIndex + 4) % menu.length].descrip,
+          variations: menu[(newIndex + 4) % menu.length].variations,
+          ingrediants: menu[(newIndex + 4) % menu.length].contains(),
         });
 
         return newIndex;
@@ -83,43 +100,43 @@ export default function Home(props) {
     }, 8000);
     return () => clearInterval(intervalId);
   }, [menu, currentIndex]);
-
+  let [toggle, setToggle] = useState(false);
   return (
     <main className="main-body">
       <div className="page-hero">
-        <img className="hero-image" src={firstImage.src} alt={firstImage.alt} />
+        <img
+          className="hero-image"
+          src={firstImage.src}
+          alt={`The dish is called ${firstImage.name}`}
+        />
         <h1 className="page-title">Claras' Kitchen & Co.</h1>
         <div className="hero-item-info">
           <h2 className="item-title">{firstImage.name}</h2>
           <p className="item-descrip">{firstImage.descrip}</p>
+          <p>Variations :</p>
           <ul>
             {firstImage.variations.map((each) => {
-              return <li className="item-info">{each}</li>;
+              return <li className="item-variation">{each}</li>;
             })}
           </ul>
           <button
+            className="item-check-ingrediant-btn"
             onClick={() => {
               setToggle(!toggle);
             }}
           >
             {toggle ? "Collapse Ingrediants" : "Check Ingrediants"}
           </button>
-          {toggle && <p className="ingrediants">{firstImage.ingrediants}</p>}
+          {toggle && (
+            <p className="item-ingrediant">{firstImage.ingrediants}</p>
+          )}
         </div>
       </div>
       <div className="page-carousel">
-        <div className="carousel-item">
-          <img src={secondImage.src} alt={secondImage.alt} />
-        </div>
-        <div className="carousel-item">
-          <img src={thirdImage.src} alt={thirdImage.alt} />
-        </div>
-        <div className="carousel-item">
-          <img src={fourthImage.src} alt={fourthImage.alt} />
-        </div>
-        <div className="carousel-item">
-          <img src={fifthImage.src} alt={fifthImage.alt} />
-        </div>
+        <LargeCarouselItem content={secondImage} />
+        <LargeCarouselItem content={thirdImage} />
+        <LargeCarouselItem content={fourthImage} />
+        <LargeCarouselItem content={fifthImage} />
       </div>
       <div className="page-contact"></div>
     </main>

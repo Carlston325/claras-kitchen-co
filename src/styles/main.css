@@ -21,13 +21,19 @@ h1 {
   color: var(--primary-text-color);
   font-size: 20px;
 }
+p {
+  margin: var(--zeroMargin);
+}
 .main-body {
   width: 78%;
 }
 .page-hero {
-  width: 100%;
-  height: 60vh;
+  width: 92%;
+  height: 70vh;
+  padding: var(--page-padding);
   position: relative;
+  top: 0;
+  left: 0;
   overflow: hidden;
 }
 .hero-image {
@@ -40,14 +46,83 @@ h1 {
   z-index: 0;
 }
 .page-title {
-  padding: 4% 6%;
+  padding: 2% 2%;
   font-size: clamp(2rem, 5vw, 7rem);
   font-family: var(--friendly-font);
   position: relative;
+  top: 0px;
   z-index: 1;
   text-shadow: 1px 0px 2px rgba(0, 0, 0, 0.5);
 }
 .hero-item-info {
+  background-color: #00000070;
+  color: var(--tertiary-text-color);
+  width: 55%;
+  padding: 4%;
+  border: 2px solid var(--background-color);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: relative;
+  top: 0px;
+  left: 40%;
+  z-index: 2;
+  font-family: var(--friendly-font);
+  font-size: clamp(0.6rem, 1rem, 1.6rem);
+  letter-spacing: 1.6px;
+}
+.hero-item-info > .item-title {
+  width: 100%;
+  margin: var(--zeroMargin);
+  font-family: var(--serious-font);
+  font-size: clamp(1rem, 2rem, 3rem);
+  text-wrap: wrap;
+}
+.hero-item-info > .item-descrip {
+  margin: var(--zeroMargin);
+  width: 100%;
+  text-wrap: wrap;
+}
+.hero-item-info > ul {
+  margin: var(--zeroMargin);
+}
+.hero-item-info > .item-check-ingrediant-btn {
+  background-color: white;
+  color: var(--background-color);
+  width: 50%;
+  font-family: var(--serious-font);
+  font-size: clamp(0.8rem, 1.2rem, 1.5rem);
+  text-shadow: 1px 0px 2px var(--primary-text-color);
+}
+.hero-item-info > .item-ingrediant {
+  width: 100%;
+  margin: var(--zeroMargin);
+  text-wrap: wrap;
+}
+
+.page-carousel {
+  width: 92%;
+  padding: var(--page-padding);
+  display: flex;
+  position: relative;
+  top: -4%;
+}
+.carousel-item {
+  width: 100%;
+  height: 20vh;
+  position: relative;
+  overflow: hidden;
+}
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.carousel-item-info {
   position: relative;
   z-index: 2;
 }
