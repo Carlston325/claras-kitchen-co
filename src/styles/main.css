@@ -30,8 +30,9 @@ p {
   margin: var(--zeroMargin);
 }
 .main-body {
-  flex: 1;
-
+  width: 92%;
+  margin: var(--zeroMargin);
+  padding: 0;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
@@ -115,6 +116,7 @@ p {
 .page-carousel {
   flex: 0.5;
   width: 92%;
+  height: 300px;
   margin-top: -10%;
   padding: var(--page-padding);
   display: flex;
