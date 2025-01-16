@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-// import SmallCarouselItem from "../components/SmallCarouselItem";
-import LargeCarouselItem from "../components/LargeCarouselItem";
+import CarouselItem from "../components/CarouselItem";
 
 export default function Home(props) {
   console.log(`Viewport Width: ${window.innerWidth}`);
@@ -9,10 +8,12 @@ export default function Home(props) {
   let [currentIndex, setCurrentIndex] = useState(0);
   const menuData = props.menu;
   const menu = menuData.map((item) => {
+    const ingrediants = item.ingrediants.join(", ");
+
     return {
       ...item,
       contains() {
-        return `This dish contain the following ingrediants: ${this.ingrediants}`;
+        return `This dish contain: ${ingrediants}`;
       },
     };
   });
@@ -110,7 +111,7 @@ export default function Home(props) {
           alt={`The dish is called ${firstImage.name}`}
         />
         <h1 className="page-title">Claras' Kitchen & Co.</h1>
-        <div className="hero-item-info">
+        <div className="hero-item-box">
           <h2 className="item-title">{firstImage.name}</h2>
           <p className="item-descrip">{firstImage.descrip}</p>
           <p>Variations :</p>
@@ -133,12 +134,24 @@ export default function Home(props) {
         </div>
       </div>
       <div className="page-carousel">
-        <LargeCarouselItem content={secondImage} />
-        <LargeCarouselItem content={thirdImage} />
-        <LargeCarouselItem content={fourthImage} />
-        <LargeCarouselItem content={fifthImage} />
+        <CarouselItem content={secondImage} />
+        <CarouselItem content={thirdImage} />
+        <CarouselItem content={fourthImage} />
+        <CarouselItem content={fifthImage} />
       </div>
-      <div className="page-contact"></div>
+      <div className="page-contact">
+        <h2 className="contact-title">Any Questions? | Want to Order!</h2>
+        <div className="contact-call-box">
+          <h3>CALL US</h3>
+          <a href="tel:07383 286586">(+44) 07383 286586</a>
+        </div>
+        <div className="contact-email-box">
+          <h3>EMAIL US</h3>
+          <a href="mailto:claramarcelo31@yahoo.co.uk">
+            claramarcelo31@yahoo.co.uk
+          </a>
+        </div>
+      </div>
     </main>
   );
 }

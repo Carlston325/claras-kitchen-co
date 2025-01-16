@@ -1,4 +1,4 @@
-function SmallCarouselItem(props) {
+function CarouselItem(props) {
   const fillItem = props.content;
 
   return (
@@ -8,10 +8,11 @@ function SmallCarouselItem(props) {
         src={fillItem.src}
         alt={`The dish is called ${fillItem.name}`}
       />
-      <div className="carousel-item-info">
+      <div className="carousel-item-box">
         <h2 className="carousel-item-title">{fillItem.name}</h2>
+        <p className="carousel-item-descrip">{fillItem.descrip}</p>
       </div>
     </div>
   );
 }
-export default SmallCarouselItem;
+export default CarouselItem;

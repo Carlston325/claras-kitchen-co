@@ -3,15 +3,17 @@
   --secondary-text-color: #000000;
   --tertiary-text-color: #ffffff;
   --background-color: #d14900;
+  --top-margin: 4% 0% 0% 0%;
   --page-padding: 0% 4%;
   --zeroMargin: 0;
   --serious-font: "Black Ops One", serif;
   --friendly-font: "Chango", serif;
 }
-body {
-  width: auto;
-  height: 100vh;
-  margin: var(--zeroMargin);
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 #root {
   display: flex;
@@ -21,15 +23,24 @@ h1 {
   color: var(--primary-text-color);
   font-size: 20px;
 }
+h2 {
+  font-family: var(--serious-font);
+}
 p {
   margin: var(--zeroMargin);
 }
 .main-body {
-  width: 78%;
+  flex: 1;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 20px;
 }
 .page-hero {
+  flex: 1;
   width: 92%;
-  height: 70vh;
+  height: 540px;
   padding: var(--page-padding);
   position: relative;
   top: 0;
@@ -52,41 +63,42 @@ p {
   position: relative;
   top: 0px;
   z-index: 1;
-  text-shadow: 1px 0px 2px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 4px var(--secondary-text-color);
 }
-.hero-item-info {
-  background-color: #00000070;
+.hero-item-box {
+  background-color: #00000099;
   color: var(--tertiary-text-color);
-  width: 55%;
-  padding: 4%;
-  border: 2px solid var(--background-color);
+  width: 46%;
+  padding: 1.8%;
+  border: solid 2px var(--background-color);
   display: flex;
   flex-direction: column;
   gap: 14px;
   position: relative;
   top: 0px;
-  left: 40%;
+  left: 50%;
   z-index: 2;
   font-family: var(--friendly-font);
   font-size: clamp(0.6rem, 1rem, 1.6rem);
   letter-spacing: 1.6px;
+  text-shadow: 2px 0px 2px var(--secondary-text-color);
 }
-.hero-item-info > .item-title {
+.hero-item-box > .item-title {
   width: 100%;
   margin: var(--zeroMargin);
-  font-family: var(--serious-font);
   font-size: clamp(1rem, 2rem, 3rem);
   text-wrap: wrap;
 }
-.hero-item-info > .item-descrip {
+.hero-item-box > .item-descrip {
   margin: var(--zeroMargin);
   width: 100%;
   text-wrap: wrap;
 }
-.hero-item-info > ul {
+.hero-item-box > ul {
   margin: var(--zeroMargin);
+  list-style-type: none;
 }
-.hero-item-info > .item-check-ingrediant-btn {
+.hero-item-box > .item-check-ingrediant-btn {
   background-color: white;
   color: var(--background-color);
   width: 50%;
@@ -94,24 +106,36 @@ p {
   font-size: clamp(0.8rem, 1.2rem, 1.5rem);
   text-shadow: 1px 0px 2px var(--primary-text-color);
 }
-.hero-item-info > .item-ingrediant {
+.hero-item-box > .item-ingrediant {
+  color: var(--primary-text-color);
   width: 100%;
   margin: var(--zeroMargin);
   text-wrap: wrap;
 }
-
 .page-carousel {
+  flex: 0.5;
   width: 92%;
+  margin-top: -10%;
   padding: var(--page-padding);
   display: flex;
-  position: relative;
-  top: -4%;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  z-index: 2;
 }
 .carousel-item {
-  width: 100%;
-  height: 20vh;
-  position: relative;
+  background-color: #ffffff;
+  width: clamp(50px, 20vw, 200px);
+  height: clamp(50px, 20vw, 200px);
+  border: solid 2px var(--background-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: clamp(20px, 5vw, 40px);
+  font-weight: bold;
   overflow: hidden;
+  position: relative;
 }
 .carousel-image {
   width: 100%;
@@ -122,7 +146,57 @@ p {
   left: 0;
   z-index: 0;
 }
-.carousel-item-info {
+.carousel-item-box {
+  background-color: #00000099;
+  color: var(--tertiary-text-color);
+  height: inherit;
+  padding: 0 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
   position: relative;
+  top: 0px;
+  left: 0%;
   z-index: 2;
+  font-family: var(--friendly-font);
+  font-size: clamp(0.6rem, 0.7rem, 1rem);
+  letter-spacing: 1px;
+  text-shadow: 2px 0px 2px var(--secondary-text-color);
+  text-align: center;
+}
+.carousel-item-box > .carousel-item-title {
+  width: 50%;
+  margin: var(--zeroMargin);
+  font-size: clamp(0.6rem, 1.4rem, 3rem);
+}
+.carousel-item-box > .carousel-item-descrip {
+  margin: var(--zeroMargin);
+}
+.page-contact {
+  flex: 0.1;
+  background-color: var(--background-color);
+  width: 92%;
+  height: clamp(170px, 200px, 300px);
+  padding: var(--page-padding);
+  display: grid;
+  grid-template-columns: repeat(2, 49%);
+  grid-template-rows: repeat(2, 80px);
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  gap: 2%;
+  position: relative;
+  top: 0%;
+  text-align: center;
+}
+.page-contact > .contact-title {
+  grid-area: 1/1/2/3;
+}
+.page-contact > .contact-call-box {
+  grid-area: 2/1/3/2;
+}
+.page-contact > .contact-email-box {
+  grid-area: 2/2/3/3;
 }
