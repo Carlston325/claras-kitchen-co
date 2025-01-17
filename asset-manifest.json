@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/claras-kitchen-co/static/css/main.0f25f79b.css",
+    "main.js": "/claras-kitchen-co/static/js/main.b9d5675d.js",
+    "static/media/mince_chops.jpg": "/claras-kitchen-co/static/media/mince_chops.d1b66b13b09f33cd97d2.jpg",
+    "static/media/logo.jpeg": "/claras-kitchen-co/static/media/logo.ca1fd8d608dcb4e62047.jpeg",
+    "static/media/sorpotel.jpg": "/claras-kitchen-co/static/media/sorpotel.220572987089a508be6c.jpg",
+    "static/media/chole.jpg": "/claras-kitchen-co/static/media/chole.a487671d092078d843a4.jpg",
+    "static/media/wheat_halwa.jpg": "/claras-kitchen-co/static/media/wheat_halwa.84c9512eb7c1f1127de5.jpg",
+    "static/media/biriyani_image.jpg": "/claras-kitchen-co/static/media/biriyani_image.ce4d7809f5d4ef30de96.jpg",
+    "static/media/xacuti.webp": "/claras-kitchen-co/static/media/xacuti.cbceaaea99165d9a320d.webp",
+    "static/media/veg_kurma.jpg": "/claras-kitchen-co/static/media/veg_kurma.98c842d1b5d501e17585.jpg",
+    "static/media/fried_rice.jpg": "/claras-kitchen-co/static/media/fried_rice.b2489db9577b4ca57698.jpg",
+    "static/media/leaf-background.png": "/claras-kitchen-co/static/media/leaf-background.222d56c2ab0b2db7dfab.png",
+    "index.html": "/claras-kitchen-co/index.html",
+    "main.0f25f79b.css.map": "/claras-kitchen-co/static/css/main.0f25f79b.css.map",
+    "main.b9d5675d.js.map": "/claras-kitchen-co/static/js/main.b9d5675d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0f25f79b.css",
+    "static/js/main.b9d5675d.js"
+  ]
+}
