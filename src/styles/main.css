@@ -124,7 +124,7 @@ p {
   padding: var(--page-padding);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   gap: 10px;
   z-index: 2;
 }
@@ -185,6 +185,7 @@ p {
   width: 92%;
   height: clamp(170px, 200px, 300px);
   padding: var(--page-padding);
+  padding-bottom: 2%;
   display: grid;
   grid-template-columns: repeat(2, 49%);
   grid-template-rows: repeat(2, 80px);
