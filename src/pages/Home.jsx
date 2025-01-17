@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import CarouselItem from "../components/CarouselItem";
 
 export default function Home(props) {
-  console.log(`Viewport Width: ${window.innerWidth}`);
-  console.log(`Viewport Height: ${window.innerHeight}`);
+  // console.log(`Viewport Width: ${window.innerWidth}`);
+  // console.log(`Viewport Height: ${window.innerHeight}`);
 
   let [currentIndex, setCurrentIndex] = useState(0);
   const menuData = props.menu;
