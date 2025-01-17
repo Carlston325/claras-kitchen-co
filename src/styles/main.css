@@ -16,7 +16,11 @@ html {
   height: 100%;
 }
 #root {
+  width: inherit;
+  height: inherit;
   display: flex;
+  margin: 0;
+  padding: 0;
 }
 h1 {
   margin: var(--zeroMargin);
@@ -33,10 +37,8 @@ p {
   width: 92%;
   margin: var(--zeroMargin);
   padding: 0;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  gap: 20px;
+  display: flex;
+  flex-direction: column;
 }
 .page-hero {
   flex: 1;
@@ -69,7 +71,8 @@ p {
 .hero-item-box {
   background-color: #00000099;
   color: var(--tertiary-text-color);
-  width: 46%;
+  width: clamp(28%, 50%, 100%);
+  margin: var(--top-margin);
   padding: 1.8%;
   border: solid 2px var(--background-color);
   display: flex;
