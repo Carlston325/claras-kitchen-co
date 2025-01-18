@@ -4,20 +4,20 @@
   --tertiary-text-color: #ffffff;
   --background-color: #d14900;
   --top-margin: 4% 0% 0% 0%;
-  --page-padding: 0% 4%;
+  --page-padding: 2% 4%;
   --zeroMargin: 0;
   --serious-font: "Black Ops One", serif;
   --friendly-font: "Chango", serif;
 }
 body,
 html {
+  width: 100%;
+  min-height: 100%;
   margin: 0;
   padding: 0;
-  height: 100%;
 }
 #root {
   width: inherit;
-  height: inherit;
   display: flex;
   margin: 0;
   padding: 0;
@@ -34,21 +34,18 @@ p {
   margin: var(--zeroMargin);
 }
 .main-body {
-  width: 92%;
+  width: 84%;
   margin: var(--zeroMargin);
   padding: 0;
   display: flex;
   flex-direction: column;
 }
 .page-hero {
-  flex: 1;
-  width: 92%;
   height: 540px;
   padding: var(--page-padding);
   position: relative;
   top: 0;
   left: 0;
-  overflow: hidden;
 }
 .hero-image {
   width: 100%;
@@ -71,10 +68,9 @@ p {
 .hero-item-box {
   background-color: #00000099;
   color: var(--tertiary-text-color);
-  width: clamp(28%, 50%, 100%);
+  width: 46%;
   margin: var(--top-margin);
-  padding: 1.8%;
-  border: solid 2px var(--background-color);
+  padding: 2%;
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -117,10 +113,7 @@ p {
   text-wrap: wrap;
 }
 .page-carousel {
-  flex: 0.5;
-  width: 92%;
-  height: 300px;
-  margin-top: -10%;
+  margin-top: -8%;
   padding: var(--page-padding);
   display: flex;
   align-items: center;
@@ -154,6 +147,7 @@ p {
 .carousel-item-box {
   background-color: #00000099;
   color: var(--tertiary-text-color);
+  width: inherit;
   height: inherit;
   padding: 0 4%;
   display: flex;
@@ -180,10 +174,7 @@ p {
   margin: var(--zeroMargin);
 }
 .page-contact {
-  flex: 0.1;
   background-color: var(--background-color);
-  width: 92%;
-  height: clamp(170px, 200px, 300px);
   padding: var(--page-padding);
   padding-bottom: 2%;
   display: grid;
@@ -205,4 +196,40 @@ p {
 }
 .page-contact > .contact-email-box {
   grid-area: 2/2/3/3;
+}
+
+@media (min-width: 1080px) {
+  .page-carousel {
+    margin: 2% 0;
+  }
+}
+@media (min-width: 670px) and (max-width: 1080px) {
+  .hero-item-box {
+    width: 56%;
+    left: 40%;
+  }
+}
+@media (max-width: 1000px) {
+  .main-body {
+    width: 80%;
+  }
+  .hero-item-box {
+    width: 96%;
+    left: 0;
+  }
+  .carousel-item-box > .carousel-item-title {
+    width: 100%;
+    font-size: 12px;
+  }
+  .carousel-item-box > .carousel-item-descrip {
+    display: none;
+  }
+  .page-contact > .contact-call-box {
+    width: 100%;
+    grid-area: 2/1/3/3;
+  }
+  .page-contact > .contact-email-box {
+    width: 100%;
+    grid-area: 3/1/4/3;
+  }
 }

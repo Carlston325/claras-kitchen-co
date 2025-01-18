@@ -62,6 +62,9 @@
   justify-content: space-evenly;
 }
 @media (max-width: 580px) {
+  #navbar {
+    width: 16%;
+  }
   .secondary-nav {
     height: 180px;
     flex-direction: column;
