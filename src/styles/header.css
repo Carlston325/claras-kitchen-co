@@ -61,10 +61,12 @@
   align-items: center;
   justify-content: space-evenly;
 }
-@media (max-width: 580px) {
+@media (max-width: 1000px) {
   #navbar {
     width: 16%;
   }
+}
+@media (max-width: 580px) {
   .secondary-nav {
     height: 180px;
     flex-direction: column;

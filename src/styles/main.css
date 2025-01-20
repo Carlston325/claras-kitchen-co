@@ -58,7 +58,7 @@ p {
 }
 .page-title {
   padding: 2% 2%;
-  font-size: clamp(2rem, 5vw, 7rem);
+  font-size: clamp(2rem, 3rem, 7rem);
   font-family: var(--friendly-font);
   position: relative;
   top: 0px;
@@ -105,6 +105,8 @@ p {
   font-family: var(--serious-font);
   font-size: clamp(0.8rem, 1.2rem, 1.5rem);
   text-shadow: 1px 0px 2px var(--primary-text-color);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 .hero-item-box > .item-ingrediant {
   color: var(--primary-text-color);
@@ -123,8 +125,8 @@ p {
 }
 .carousel-item {
   background-color: #ffffff;
-  width: clamp(50px, 20vw, 200px);
-  height: clamp(50px, 20vw, 200px);
+  width: clamp(50px, 20vw, 300px);
+  height: clamp(50px, 20vw, 300px);
   border: solid 2px var(--background-color);
   display: flex;
   align-items: center;
@@ -166,9 +168,11 @@ p {
   text-align: center;
 }
 .carousel-item-box > .carousel-item-title {
-  width: 50%;
+  width: 100%;
   margin: var(--zeroMargin);
   font-size: clamp(0.6rem, 1.4rem, 3rem);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 .carousel-item-box > .carousel-item-descrip {
   margin: var(--zeroMargin);
@@ -198,15 +202,22 @@ p {
   grid-area: 2/2/3/3;
 }
 
-@media (min-width: 1080px) {
-  .page-carousel {
-    margin: 2% 0;
+@media (max-width: 800px) {
+  .page-hero {
+    height: 610px;
   }
-}
-@media (min-width: 670px) and (max-width: 1080px) {
-  .hero-item-box {
-    width: 56%;
-    left: 40%;
+  .page-carousel {
+    margin-top: -10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+  }
+  .page-carousel > .carousel-item {
+    width: 30vw;
+    height: 30vw;
   }
 }
 @media (max-width: 1000px) {
@@ -217,12 +228,11 @@ p {
     width: 96%;
     left: 0;
   }
-  .carousel-item-box > .carousel-item-title {
-    width: 100%;
-    font-size: 12px;
-  }
   .carousel-item-box > .carousel-item-descrip {
     display: none;
+  }
+  .hero-item-box > .item-check-ingrediant-btn {
+    width: 60%;
   }
   .page-contact > .contact-call-box {
     width: 100%;
@@ -231,5 +241,37 @@ p {
   .page-contact > .contact-email-box {
     width: 100%;
     grid-area: 3/1/4/3;
+  }
+}
+@media (min-width: 800px) and (max-width: 1080px) {
+  .hero-item-box {
+    width: 56%;
+    left: 40%;
+  }
+  /* .main-body > .page-carousel {
+    margin-top: -24%;
+  } */
+}
+@media (min-width: 1400px) {
+  .page-carousel {
+    margin-top: -5%;
+  }
+}
+@media (min-width: 1600px) {
+  .page-hero {
+    max-height: max-content;
+    height: 650px;
+  }
+  .page-title {
+    font-size: clamp(2rem, 5rem, 7rem);
+  }
+  .hero-item-box {
+    width: 50%;
+    font-size: clamp(1rem, 1.6rem, 2.4rem);
+    left: 46%;
+  }
+  .page-carousel {
+    margin: 2% 0;
+    margin-top: 0%;
   }
 }

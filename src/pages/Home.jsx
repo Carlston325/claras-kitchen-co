@@ -107,16 +107,16 @@ export default function Home(props) {
       <div className="page-hero">
         <img
           className="hero-image"
-          src={firstImage.src}
-          alt={`The dish is called ${firstImage.name}`}
+          src={menu[2].image}
+          alt={`The dish is called ${menu[2].name}`}
         />
         <h1 className="page-title">Claras' Kitchen & Co.</h1>
         <div className="hero-item-box">
-          <h2 className="item-title">{firstImage.name}</h2>
-          <p className="item-descrip">{firstImage.descrip}</p>
+          <h2 className="item-title">{menu[2].name}</h2>
+          <p className="item-descrip">{menu[2].descrip}</p>
           <p>Variations :</p>
           <ul>
-            {firstImage.variations.map((each) => {
+            {menu[2].variations.map((each) => {
               return <li className="item-variation">{each}</li>;
             })}
           </ul>
