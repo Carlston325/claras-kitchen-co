@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/claras-kitchen-co/static/css/main.655bf86a.css",
-    "main.js": "/claras-kitchen-co/static/js/main.af0af4de.js",
+    "main.css": "/claras-kitchen-co/static/css/main.4719206b.css",
+    "main.js": "/claras-kitchen-co/static/js/main.977fb691.js",
     "static/media/mince_chops.jpg": "/claras-kitchen-co/static/media/mince_chops.d1b66b13b09f33cd97d2.jpg",
     "static/media/logo.jpeg": "/claras-kitchen-co/static/media/logo.ca1fd8d608dcb4e62047.jpeg",
     "static/media/sorpotel.jpg": "/claras-kitchen-co/static/media/sorpotel.220572987089a508be6c.jpg",
@@ -13,11 +13,11 @@
     "static/media/fried_rice.jpg": "/claras-kitchen-co/static/media/fried_rice.b2489db9577b4ca57698.jpg",
     "static/media/leaf-background.png": "/claras-kitchen-co/static/media/leaf-background.222d56c2ab0b2db7dfab.png",
     "index.html": "/claras-kitchen-co/index.html",
-    "main.655bf86a.css.map": "/claras-kitchen-co/static/css/main.655bf86a.css.map",
-    "main.af0af4de.js.map": "/claras-kitchen-co/static/js/main.af0af4de.js.map"
+    "main.4719206b.css.map": "/claras-kitchen-co/static/css/main.4719206b.css.map",
+    "main.977fb691.js.map": "/claras-kitchen-co/static/js/main.977fb691.js.map"
   },
   "entrypoints": [
-    "static/css/main.655bf86a.css",
-    "static/js/main.af0af4de.js"
+    "static/css/main.4719206b.css",
+    "static/js/main.977fb691.js"
   ]
 }

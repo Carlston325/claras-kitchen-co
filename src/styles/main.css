@@ -32,6 +32,7 @@ h2 {
   font-family: var(--serious-font);
 }
 p {
+  font-family: var(--friendly-font);
   margin: var(--zeroMargin);
 }
 .main-body {
@@ -184,23 +185,38 @@ p {
   padding-bottom: 2%;
   display: grid;
   grid-template-columns: repeat(2, 49%);
-  grid-template-rows: repeat(2, 80px);
+  grid-template-rows: auto;
   align-items: center;
   align-content: center;
   justify-items: center;
   gap: 2%;
   position: relative;
   top: 0%;
+  font-size: 20px;
   text-align: center;
 }
 .page-contact > .contact-title {
+  margin-bottom: 2%;
   grid-area: 1/1/2/3;
+  font-size: 40px;
+}
+.page-contact > .about-us {
+  color: var(--tertiary-text-color);
+  grid-area: 2/1/3/3;
+  text-align: start;
 }
 .page-contact > .contact-call-box {
-  grid-area: 2/1/3/2;
+  grid-area: 3/1/4/2;
 }
 .page-contact > .contact-email-box {
-  grid-area: 2/2/3/3;
+  grid-area: 3/2/4/3;
+}
+.page-contact a {
+  color: var(--tertiary-text-color);
+}
+.page-contact h3 {
+  font-family: var(--serious-font);
+  font-weight: 900;
 }
 
 @media (max-width: 800px) {
@@ -235,13 +251,20 @@ p {
   .hero-item-box > .item-check-ingrediant-btn {
     width: 60%;
   }
+  .page-contact {
+    display: block;
+  }
   .page-contact > .contact-call-box {
     width: 100%;
-    grid-area: 2/1/3/3;
   }
   .page-contact > .contact-email-box {
     width: 100%;
-    grid-area: 3/1/4/3;
+  }
+  .page-contact .contact-title {
+    font-size: 30px;
+  }
+  .page-contact p.about-us {
+    font-size: 15px;
   }
 }
 @media (min-width: 800px) and (max-width: 1080px) {
@@ -249,9 +272,6 @@ p {
     width: 56%;
     left: 40%;
   }
-  /* .main-body > .page-carousel {
-    margin-top: -24%;
-  } */
 }
 @media (min-width: 1400px) {
   .page-carousel {
