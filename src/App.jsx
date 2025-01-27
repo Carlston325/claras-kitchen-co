@@ -90,7 +90,7 @@ export default function App() {
       <Header navbarLogo={logo} navbarLogoAlt={setHeaderLogoAlt} />
       <Routes>
         <Route exact path="/" element={<Home menu={menu} />} />
-        <Route path="/menu" element={<Menu />} />
+        <Route path="/menu" element={<Menu menu={menu} />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </>
