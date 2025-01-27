@@ -26,14 +26,40 @@ html {
 h1 {
   margin: var(--zeroMargin);
   color: var(--primary-text-color);
-  font-size: 20px;
+  font-size: 40px;
 }
 h2 {
   font-family: var(--serious-font);
+  font-size: 26px;
+}
+h3 {
+  font-family: var(--serious-font);
+  font-size: 22px;
 }
 p {
   font-family: var(--friendly-font);
   margin: var(--zeroMargin);
+}
+ul {
+  font-family: var(--serious-font);
+}
+.btn {
+  background-color: white;
+  color: var(--background-color);
+  width: 100%;
+  border: 0;
+  font-weight: 800;
+  font-size: 1rem;
+  font-family: var(--serious-font);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+.btn:hover {
+  color: #ff8839;
+  letter-spacing: 2px;
+}
+.btn:active {
+  color: #ff0000;
 }
 .main-body {
   width: 84%;
@@ -43,8 +69,9 @@ p {
   flex-direction: column;
 }
 .page-hero {
-  height: 540px;
+  height: min-content;
   padding: var(--page-padding);
+  padding-bottom: 10%;
   position: relative;
   top: 0;
   left: 0;

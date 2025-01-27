@@ -1,5 +1,4 @@
 import MenuItem from "../components/MenuItems";
-import { Link } from "react-router-dom";
 
 export default function Menu(props) {
   const menuData = props.menu;
@@ -14,13 +13,17 @@ export default function Menu(props) {
     };
   });
 
-  function handleClick() {
-    console.log("Clicked");
+  const customStyle = {
+    padding: "var(--page-padding)",
+  };
+
+  function handleClick(e) {
+    console.log(e.target.id);
   }
 
   return (
     <main className="main-body">
-      <div className="page-hero">
+      <div className="page-hero" style={customStyle}>
         <h1 className="page-title">Menu</h1>
       </div>
       <div className="page-menu">
