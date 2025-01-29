@@ -53,6 +53,7 @@ export default function Menu(props) {
         {menu.map((item) => {
           return (
             <MenuItem
+              key={item.id}
               title={item.name}
               description={item.descrip}
               image={item.image}

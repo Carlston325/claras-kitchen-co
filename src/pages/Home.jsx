@@ -58,6 +58,7 @@ export default function Home(props) {
         const newIndex = (preValue + 1) % menu.length;
 
         setFirstImage({
+          id: menu[newIndex].id,
           name: menu[newIndex].name,
           src: menu[newIndex].image,
           descrip: menu[newIndex].descrip,
@@ -65,6 +66,7 @@ export default function Home(props) {
           ingredients: menu[newIndex].contains(),
         });
         setSecondImage({
+          id: menu[(newIndex + 1) % menu.length].id,
           name: menu[(newIndex + 1) % menu.length].name,
           src: menu[(newIndex + 1) % menu.length].image,
           descrip: menu[(newIndex + 1) % menu.length].descrip,
@@ -72,6 +74,7 @@ export default function Home(props) {
           ingredients: menu[(newIndex + 1) % menu.length].contains(),
         });
         setThirdImage({
+          id: menu[(newIndex + 2) % menu.length].id,
           name: menu[(newIndex + 2) % menu.length].name,
           src: menu[(newIndex + 2) % menu.length].image,
           descrip: menu[(newIndex + 2) % menu.length].descrip,
@@ -79,6 +82,7 @@ export default function Home(props) {
           ingredients: menu[(newIndex + 2) % menu.length].contains(),
         });
         setFourthImage({
+          id: menu[(newIndex + 3) % menu.length].id,
           name: menu[(newIndex + 3) % menu.length].name,
           src: menu[(newIndex + 3) % menu.length].image,
           descrip: menu[(newIndex + 3) % menu.length].descrip,
@@ -86,6 +90,7 @@ export default function Home(props) {
           ingredients: menu[(newIndex + 3) % menu.length].contains(),
         });
         setFifthImage({
+          id: menu[(newIndex + 4) % menu.length].id,
           name: menu[(newIndex + 4) % menu.length].name,
           src: menu[(newIndex + 4) % menu.length].image,
           descrip: menu[(newIndex + 4) % menu.length].descrip,
@@ -100,7 +105,7 @@ export default function Home(props) {
   }, [menu, currentIndex]);
   let [toggle, setToggle] = useState(false);
   return (
-    <main className="main-body">
+    <main className="main-body" style={{ alignItems: "stretch" }}>
       <div className="page-hero">
         <img
           className="hero-image"
@@ -113,8 +118,12 @@ export default function Home(props) {
           <p className="item-descrip">{firstImage.descrip}</p>
           <p>Variations :</p>
           <ul>
-            {firstImage.variations.map((each) => {
-              return <li className="item-variation">{each}</li>;
+            {firstImage.variations.map((each, index) => {
+              return (
+                <li key={index} className="item-variation">
+                  {each}
+                </li>
+              );
             })}
           </ul>
           <button
@@ -131,10 +140,10 @@ export default function Home(props) {
         </div>
       </div>
       <div className="page-carousel">
-        <CarouselItem content={secondImage} />
-        <CarouselItem content={thirdImage} />
-        <CarouselItem content={fourthImage} />
-        <CarouselItem content={fifthImage} />
+        <CarouselItem key={secondImage.id} content={secondImage} />
+        <CarouselItem key={thirdImage.id} content={thirdImage} />
+        <CarouselItem key={fourthImage.id} content={fourthImage} />
+        <CarouselItem key={fifthImage.id} content={fifthImage} />
       </div>
       <div className="page-contact">
         <h2 className="contact-title">Any Questions? | Want to Order!</h2>
