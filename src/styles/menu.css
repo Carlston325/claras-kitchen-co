@@ -12,10 +12,11 @@
   color: var(--secondary-text-color);
   width: 90%;
   height: 90%;
-  min-height: 500px;
+  min-height: 460px;
   border: 4px solid var(--background-color);
   border-radius: 25px;
   display: flex;
+  gap: 20px;
   flex-direction: column;
   align-items: stretch;
   justify-content: space-between;
@@ -24,13 +25,14 @@
   font-weight: 100;
   text-align: center;
 }
-.menu-item div {
-  padding: 2%;
+.menu-item > div:nth-child(2) {
+  height: 100%;
 }
 .menu-item img {
   width: 100%;
   height: 100%;
   max-height: 180px;
+  margin-bottom: 4%;
   object-fit: cover;
 }
 .menu-item h3 {
@@ -41,10 +43,13 @@
 }
 .menu-item p {
   margin: var(--zeroMargin);
-  padding: 2% 0;
+  padding: 0 4%;
+}
+.menu-item .menu-p-one {
+  color: var(--primary-text-color);
 }
 .menu-item .menu-p-two {
-  margin-top: 5%;
+  margin-top: 6%;
   text-transform: uppercase;
 }
 .menu-item ul {
@@ -52,4 +57,35 @@
   padding: 0;
   list-style: none;
   text-transform: uppercase;
+}
+.show-ingredients {
+  background-color: #ff8839;
+  width: 60%;
+  height: 30vh;
+  margin: 2%;
+  margin-top: 25%;
+  padding: 2%;
+  border: 5px double black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+}
+.show-ingredients > div {
+  height: 80%;
+}
+.show-ingredients > div h2 span {
+  color: var(--tertiary-text-color);
+}
+.show-ingredients .btn {
+  color: #ff0000;
+  width: 32px;
+  height: 32px;
+  margin: var(--zeroMargin);
+  padding: 0;
+  border-radius: 50%;
+  align-self: flex-end;
+}
+.show-ingredients .btn svg {
+  font-size: 2rem;
 }

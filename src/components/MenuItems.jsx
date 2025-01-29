@@ -6,11 +6,12 @@ function MenuItem(props) {
 
   return (
     <div className="menu-item">
-      <img src={image} alt={title} />
       <div>
+        <img src={image} alt={title} />
         <h3>{title}</h3>
+      </div>
+      <div>
         <p className="menu-p-one">{description}</p>
-
         <p className="menu-p-two">Made with:</p>
         <ul>
           {variations.map((x) => (
