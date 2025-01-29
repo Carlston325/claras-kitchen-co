@@ -26,8 +26,11 @@
   font-weight: 100;
   text-align: center;
 }
-.menu-item > div:nth-child(2) {
+.menu-item > div {
   height: 100%;
+}
+.menu-item > div:nth-child(2) {
+  height: 60%;
 }
 .menu-item img {
   width: 100%;
@@ -64,7 +67,7 @@
   width: 60%;
   height: 30vh;
   margin: 2%;
-  margin-top: 25%;
+  margin-top: 20%;
   padding: 2%;
   border: 5px double black;
   display: flex;

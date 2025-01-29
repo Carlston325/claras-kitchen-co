@@ -15,7 +15,6 @@ html {
   min-height: 100%;
   margin: 0;
   padding: 0;
-  overflow-y: scroll;
 }
 #root {
   width: inherit;
@@ -212,18 +211,13 @@ ul {
 .page-contact {
   background-color: var(--background-color);
   width: 92%;
-  min-height: 540px;
   padding: var(--page-padding);
-  padding-bottom: 2%;
   display: grid;
-  grid-template-columns: repeat(2, 49%);
+  gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
   align-items: center;
   justify-items: center;
-  gap: 2%;
-  position: relative;
-  top: 0%;
-  font-size: 20px;
   text-align: center;
 }
 .page-contact > .contact-title {

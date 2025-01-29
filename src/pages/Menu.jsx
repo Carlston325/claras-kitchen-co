@@ -15,8 +15,9 @@ export default function Menu(props) {
     };
   });
 
-  const customStyle = {
+  const customHeroStyle = {
     padding: "var(--page-padding)",
+    height: "100%",
   };
 
   const [selectedMenuItemName, setSelectedMenuItemName] = useState("");
@@ -46,7 +47,7 @@ export default function Menu(props) {
 
   return (
     <main className="main-body">
-      <div className="page-hero" style={customStyle}>
+      <div className="page-hero" style={customHeroStyle}>
         <h1 className="page-title">Menu</h1>
       </div>
       <div className="page-menu">
