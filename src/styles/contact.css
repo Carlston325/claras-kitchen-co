@@ -1,0 +1,104 @@
+.page-contact-section {
+  background-color: var(--primary-text-color);
+  width: 92%;
+  margin: var(--zeroMargin);
+  margin-top: 5%;
+  padding: var(--page-padding);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: auto;
+  gap: 10px;
+  align-items: start;
+  justify-items: center;
+  text-align: center;
+}
+.page-contact-section > div > h2 {
+  margin: 4%;
+  font-size: 2rem;
+}
+.contact-info {
+  width: 96%;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+}
+.contact-info > p {
+  color: var(--tertiary-text-color);
+  margin: 2% auto;
+  letter-spacing: 1px;
+  text-align: start;
+}
+.contact-info > div {
+  width: 92%;
+  margin: 2%;
+  padding: 2%;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-items: end;
+  align-items: center;
+}
+.contact-info > div > svg {
+  grid-area: 1/1/3/2;
+  background-color: var(--tertiary-text-color);
+  color: var(--background-color);
+  margin-right: 6%;
+  padding: 4%;
+  border: 2px solid var(--tertiary-text-color);
+  border-radius: 50px;
+}
+.contact-info > div > h3 {
+  margin: var(--zeroMargin);
+  justify-self: start;
+  font-size: 1rem;
+}
+.contact-info > div > a {
+  color: rgb(19, 19, 19);
+  color: var(--tertiary-text-color);
+  justify-self: start;
+  letter-spacing: 0.8px;
+}
+
+.contact-form {
+  width: 96%;
+  padding: 2%;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+}
+.contact-form-container {
+  background-color: white;
+  margin: 2%;
+  padding: 2%;
+  border-radius: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 100px 1fr;
+  align-items: stretch;
+  justify-items: center;
+  gap: 10px;
+}
+.contact-form-container > div {
+  width: 92%;
+  margin: 2%;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+}
+.contact-form-container > div:nth-child(3) {
+  grid-area: 2/1/3/3;
+}
+.contact-form-container > div:nth-child(3) > input {
+  width: 100%;
+  height: 100%;
+}
+.contact-form-container > .btn {
+  grid-area: 3/1/4/3;
+  width: 40%;
+  height: 96%;
+  padding: 2%;
+  border: 2px solid var(--background-color);
+  border-radius: 25px;
+}

@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Home from "./pages/Home";
 import Menu from "./pages/Menu";
 import Contact from "./pages/Contact";
+import NotFound from "./pages/NotFound";
 //assets
 import logo from "./assets/logo.jpeg";
 import sorpotel_image from "./assets/menu_images/sorpotel.jpg";
@@ -102,6 +103,8 @@ export default function App() {
         <Route exact path="/" element={<Home menu={menu} />} />
         <Route path="/menu" element={<Menu menu={menu} />} />
         <Route path="/contact" element={<Contact />} />
+
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );
